@@ -5,6 +5,7 @@
 <script>
 import CabecalhoGeral from './components/Head/CabecalhoGeral.vue';
 
+
 export default {
   name: 'App',
   components: {

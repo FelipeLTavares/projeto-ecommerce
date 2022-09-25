@@ -1,80 +1,62 @@
 <template>
-  <header>
-    <nav>
-      <span class="logo">LOGO</span>
-      <div class="menu">
-        <span>HOME</span>
-        <span>HOME</span>
-        <span>HOME</span>
-        <MenuIcon class="menuIcon"></MenuIcon>
+  <div class="capa">
+    <header>
+      <h5>LOGO</h5>
+      <h5>MENU</h5>
+    </header>
+      <div class="titulo">
+        <span>TITULO</span>
       </div>
-    </nav>
-    <img src="https://i.picsum.photos/id/6/5616/3744.jpg?hmac=OfsNapDl2Ndsw_54oKgnNRNYAMLv8mLZuHgEJUZ3O_I" alt="Imagem Header">
-  </header>
+      <div class="texto">
+        <span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </span>
+      </div>
+  </div>
 </template>
 
 <script>
-import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 export default {
-  name: 'CabecalhoGeral',
-  components:{
-    MenuIcon
-  }
+  name: 'CabecalhoGeral'
 }
 </script>
 
 <style>
-  header{
+  .capa{
     width: 100%;
-    height: 100vh;
-    background-color: black;
-    overflow: hidden;
-  }
-  header>nav{
-    width: 100%;
-    height: 80px;
-    background-color: rgb(7, 4, 0, 0.6);
-    position: absolute;
+    height: 60vh;
+    background-color: antiquewhite;
 
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-template-rows: 10vh 50vh;
+    grid-template-areas: 'a a' 'b c';
+    justify-content: center;
+  }
+
+  header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 30px;
+    grid-area: a;
   }
 
-  header>nav>.logo{
-    margin: 20px;
-    color: white;
-    font-size: 45px;
-    font-weight: 700;
-  }
-  header>nav>.menu{
+  .titulo{
+    grid-area: b;
     display: flex;
   }
-  header>nav>.menu>span{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 29px;
+  .titulo > span{
+    font-size: 50px;
+    margin-top: 18vh;
   }
-  header>nav>.menu>span:hover{
-    background-color: gray;
+  .texto{
+    grid-area: c;
+    display: flex;
   }
-  header>nav>.menu>.menuIcon{
-    display: none;
-  }
-  header>img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
-
-  @media(max-width: 480px){
-    header>nav>.menu>.menuIcon{
-    display: inline;
-    }
-    header>nav>.menu>span{
-      display: none;
-    }
+  .texto>span{
+    font-size: 18px;
+    margin-top: 18vh;
   }
 </style>
