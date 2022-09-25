@@ -1,15 +1,21 @@
 <template>
   <CabecalhoGeral></CabecalhoGeral>
+  <MainGeral></MainGeral>
+  <FooterGeral></FooterGeral>
 </template>
 
 <script>
 import CabecalhoGeral from './components/Head/CabecalhoGeral.vue';
+import MainGeral from './components/Main/MainGeral.vue';
+import FooterGeral from './components/Footer/FooterGeral.vue';
 
 
 export default {
   name: 'App',
   components: {
-    CabecalhoGeral
+    CabecalhoGeral,
+    MainGeral,
+    FooterGeral
 }
 }
 </script>
