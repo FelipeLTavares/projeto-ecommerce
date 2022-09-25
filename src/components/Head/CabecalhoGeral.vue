@@ -50,22 +50,31 @@ export default {
   }
   header>nav>.menu{
     display: flex;
-
   }
   header>nav>.menu>span{
     color: white;
     font-size: 20px;
     font-weight: 600;
-    padding: 26px;
+    padding: 29px;
+  }
+  header>nav>.menu>span:hover{
+    background-color: gray;
   }
   header>nav>.menu>.menuIcon{
     display: none;
   }
-
-
   header>img{
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+
+  @media(max-width: 480px){
+    header>nav>.menu>.menuIcon{
+    display: inline;
+    }
+    header>nav>.menu>span{
+      display: none;
+    }
   }
 </style>
