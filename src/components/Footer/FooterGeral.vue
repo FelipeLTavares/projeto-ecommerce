@@ -70,10 +70,9 @@ export default {
   @media(max-width:800px){
     footer{
       height: 66vh;
-      display: grid;
       grid-template-columns: 70%;
       grid-template-rows: 30vh 30vh 6vh;
-      grid-template-areas: 'x' 'y' 'z';
+      grid-template-areas: 'y' 'x' 'z';
       justify-content: center;
     }
   }

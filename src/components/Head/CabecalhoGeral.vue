@@ -2,7 +2,12 @@
   <div class="capa">
     <header>
       <h5>LOGOTIPO</h5>
-      <h5>MENU</h5>
+      <div class="menu">
+        <span class="itemMenu">INICIO</span>
+        <span class="itemMenu">PRODUTOS</span>
+        <span class="itemMenu">CONTATO</span>
+        <MenuIcon class="menuIc"></MenuIcon>
+      </div>
     </header>
       <div class="titulo">
         <span>TITULO</span>
@@ -16,9 +21,13 @@
 </template>
 
 <script>
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 export default {
-  name: 'CabecalhoGeral'
+  name: 'CabecalhoGeral',
+  components:{
+    MenuIcon
+  }
 }
 </script>
 
@@ -41,6 +50,23 @@ export default {
     justify-content: space-between;
     font-size: 30px;
     grid-area: a;
+  }
+
+  .menu{
+    display: flex;
+    align-items: center;
+  }
+  .menu>.itemMenu{
+    font-size: 20px;
+    padding: 10px;
+  }
+  .menu>.itemMenu:hover{
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .menuIc{
+    display: none;
   }
 
   .titulo{
@@ -73,6 +99,12 @@ export default {
   @media(max-width:800px){
     .capa{
       grid-template-areas: 'a a' 'b b';
+    }
+    .menu>.itemMenu{
+      display: none;
+    }
+    .menuIc{
+      display: inline;
     }
     .titulo{
       justify-content: center;
