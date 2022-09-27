@@ -57,4 +57,24 @@ export default {
   .Sociais{ grid-area: x;}
   .Opcoes{ grid-area: y;}
   .DireitosReservados{ grid-area: z;}
+
+  @media(max-width: 1200px){
+    .titulo > span{
+      font-size: 44px;
+    }
+    .texto>span{
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width:800px){
+    footer{
+      height: 66vh;
+      display: grid;
+      grid-template-columns: 70%;
+      grid-template-rows: 30vh 30vh 6vh;
+      grid-template-areas: 'x' 'y' 'z';
+      justify-content: center;
+    }
+  }
 </style>

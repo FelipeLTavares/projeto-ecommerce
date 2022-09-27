@@ -34,4 +34,14 @@ export default {
     justify-content: center;
     justify-items: center;
   }
+
+  @media(max-width: 1200px){
+    main{
+      grid-template-columns: 35% 35%
+    }
+  }
+
+  @media(max-width:800px){
+    main{grid-template-columns: auto;}
+  }
 </style>

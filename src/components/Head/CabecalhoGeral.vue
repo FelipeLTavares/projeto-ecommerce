@@ -60,4 +60,28 @@ export default {
     font-size: 18px;
     margin-top: 18vh;
   }
+
+  @media(max-width: 1200px){
+    .titulo > span{
+      font-size: 44px;
+    }
+    .texto>span{
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width:800px){
+    .capa{
+      grid-template-areas: 'a a' 'b b';
+    }
+    .titulo{
+      justify-content: center;
+    }
+    .titulo > span{
+      font-size: 40px;
+    }
+    .texto{
+      display:none;
+    }
+  }
 </style>
