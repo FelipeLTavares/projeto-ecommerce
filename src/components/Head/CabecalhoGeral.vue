@@ -1,7 +1,7 @@
 <template>
   <div class="capa">
     <header>
-      <h5>LOGO</h5>
+      <h5>LOGOTIPO</h5>
       <h5>MENU</h5>
     </header>
       <div class="titulo">
@@ -54,6 +54,7 @@ export default {
   .texto{
     grid-area: c;
     display: flex;
+    text-align: justify;
   }
   .texto>span{
     font-size: 18px;
