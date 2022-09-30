@@ -40,7 +40,7 @@ export default {
   },
   data(){
     return{
-      mostrar: true
+      mostrar: false
     }
   },
   methods: {
@@ -52,10 +52,15 @@ export default {
 </script>
 
 <style>
-  .menuSus3{
-    width: 60%;
+  .menuSus{
+    width: 100%;
     height: 100vh;
-    background-color: transparent;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 13;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
   }
   .menuSus2{
     width: 40%;
@@ -75,17 +80,12 @@ export default {
   .menuSus2>span:hover{
     background-color: gray;
   }
-  .menuSus{
-    width: 100%;
+  .menuSus3{
+    width: 60%;
     height: 100vh;
-    background-color: rgb(0, 0, 0, 0.6);
-    z-index: 13;
-    top: 0;
-    position: absolute;
-    display: flex;
-    flex-direction: row-reverse;
+    background-color: transparent;
   }
-
+  
   .capa{
     width: 100%;
     height: 60vh;
@@ -97,7 +97,6 @@ export default {
     grid-template-areas: 'a a' 'b c';
     justify-content: center;
   }
-
   header{
     display: flex;
     align-items: center;
@@ -105,7 +104,6 @@ export default {
     font-size: 30px;
     grid-area: a;
   }
-
   .menu{
     display: flex;
     align-items: center;
